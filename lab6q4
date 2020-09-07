@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Filesys::DiskSpace;
+
+my $dir = "/home";
+my $warning_level=10;
+my ($fs_type, $fs_desc, $used, $avail, $fused, $favail) = df $dir;
+
+my $df_free = (($avail) / ($avail + $used)) * 100.0; #percentage free
+
+if ($df_free < $warning_level) {
+my $a = sprintf("WARNING Low Disk Space on $dir=> %0.2f%% (OK), \n", $df_free);
+print $a
+}
+else{
+my $a = sprintf("Disk Space on $dir => %0.2f%% (OK),\n", $df_free);
+print $a
+}
+
+

@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+@family = ('Abdullah', 'Maha', 'Asher', 'Talia');
+%shoe_color = ('Abdullah', 'black','Maha', 'red', 'Asher', 'white', 'Talia', 'golden');
+%shoe_size = ('Abdullah', 8 ,'Maha', 4, 'Asher', 6, 'Talia', 11);
+
+foreach $n(@family){
+	if($shoe_size{$n}>10){
+		print "$n wears large $shoe_color{$n} shoes size $shoe_size{$n}\n";}
+	else{
+		print "$n wears $shoe_color{$n} shoes size $shoe_size{$n}\n";}
+}
+
+

@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+@NUMBERS = <12, 347, 234, 33, 25, 66, 80, 78>;
+
+print "\nEven no.s"."\n";
+
+foreach $i(@NUMBERS){
+	if($i==237){
+		last;
+	}
+	elsif($i%2==0){
+		print "$i\n";
+	}
+}
